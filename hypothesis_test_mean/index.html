@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hypothesis Testing Calculator</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Hypothesis Testing Calculator">
+  <meta name="author" content="Robert Granger">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Hypothesis Testing Calculator</h1>
+    <h2>for the mean</h2>
+    <p>Robert Granger<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What does the App do?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>The application conducts a hypothesis test on the mean given some inputs.</li>
+<li>Shows an interactive graph of the sampling distribution with the rejection region in red.</li>
+<li>Lists important statistics like the critical values, p-values, etc...</li>
+<li>Gives a conclusion on whether one should reject or not reject.</li>
+</ol>
+
+<h2>Why is this App useful?</h2>
+
+<ol>
+<li>Hypothesis testing can be complicated and easy to make mistakes.</li>
+<li>Much quicker than conducting the test from scratch.</li>
+<li>Excellent tool for new learners of statistics to better understand the concept.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The User Interface</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><tr>
+        <td><img src="assets/img/inputbar.jpg"></td>
+
+<td>The user interface has:
+
+<ul>
+<li>4 regular text inputs (although they take numbers)</li>
+<li>2 sets of radio buttons</li>
+<li>1 numeric input</li>
+</ul>
+</td>
+
+</tr></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Sampling Distribution Graph</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/normdist.png"></p>
+
+<p>This graph is fairly tricky as it is entirely reactive to the inputs.  Below is the code used to initially generate the graph when a population standard deviation is used. To give the graph its color, polygons were used but this code is omitted.</p>
+
+<pre><code class="r">#Creating the plot#
+curve(dnorm(x,mu,SE),xlim=c(boundl,boundu),
+      main=&#39;Normal Density&#39;,
+      ylab=&quot;&quot;,yaxt=&quot;n&quot;,
+      xlab=&quot;Sample Mean&quot;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Hypothesis Test</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The final part of the application is the test itself.</p>
+
+<p><img src="assets/img/output.png"></p>
+
+<p>The application gives all the useful statistics along with a conclusion.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What does the App do?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The User Interface'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Sampling Distribution Graph'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Hypothesis Test'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
