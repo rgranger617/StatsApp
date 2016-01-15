@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+bundleId:
+        https://api.rpubs.com/api/v1/document/143207/d1ea2ad61a9947e78f89bc5e43c8fa10
+url: http://rpubs.com/rgranger617/143207
+when: 1452812153.06472

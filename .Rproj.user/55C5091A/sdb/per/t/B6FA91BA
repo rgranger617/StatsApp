@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle       : Hypothesis Testing Calculator\nsubtitle    : for the mean\nauthor      : Robert Granger\njob         : \nframework   : io2012        # {io2012, html5slides, shower, dzslides, ...}\nhighlighter : highlight.js  # {highlight.js, prettify, highlight}\nhitheme     : tomorrow      # \nwidgets     : []            # {mathjax, quiz, bootstrap}\nmode        : selfcontained # {standalone, draft}\nknit        : slidify::knit2slides\n---\n\n## What does the App do?\n\n1. The application conducts a hypothesis test on the mean given some inputs.\n2. Shows an interactive graph of the sampling distribution with the rejection region in red.\n3. Lists important statistics like the critical values, p-values, etc...\n4. Gives a conclusion on whether one should reject or not reject.\n\n## Why is this App useful?\n1. Hypothesis testing can be complicated and easy to make mistakes.\n2. Much quicker than conducting the test from scratch.\n3. Excellent tool for new learners of statistics to better understand the concept.\n\n--- .class #id \n\n## The User Interface\n\n\n<table><tr>\n        <td><img src=\"assets/img/inputbar.jpg\"></td>\n\n<td>The user interface has:\n\n<ul>\n<li>4 regular text inputs (although they take numbers)</li>\n<li>2 sets of radio buttons</li>\n<li>1 numeric input</li>\n</ul>\n</td>\n\n</tr></table>\n\n\n---\n## Sampling Distribution Graph\n\n<img src=\"assets/img/normdist.png\">\n\nThis graph is fairly tricky as it is entirely reactive to the inputs.  Below is the code used to initially generate the graph when a population standard deviation is used. To give the graph its color, polygons were used but this code is omitted.\n\n\n```r\n#Creating the plot#\ncurve(dnorm(x,mu,SE),xlim=c(boundl,boundu),\n      main='Normal Density',\n      ylab=\"\",yaxt=\"n\",\n      xlab=\"Sample Mean\")\n```\n\n---\n## Hypothesis Test\nThe final part of the application is the test itself.\n\n<img src=\"assets/img/output.png\">\n\nThe application gives all the useful statistics along with a conclusion.\n\n\n\n",
+    "created" : 1452813366082.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "845457481",
+    "id" : "B6FA91BA",
+    "lastKnownWriteTime" : 1452813346,
+    "path" : "~/Coursera/Data Science Specialization/Developing Data Products/statsapp/hypothesis_test_mean Slidify/index.md",
+    "project_path" : "hypothesis_test_mean Slidify/index.md",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "markdown"
+}
